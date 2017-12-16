@@ -1,0 +1,278 @@
+$icon-font-path:'../fonts/';
+$border-radius-base:0;
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/sass-font-awesome/font-awesome.scss";
+@import "bower_components/slick-carousel/slick/slick.scss";
+@import "bower_components/slick-carousel/slick/slick-theme.scss";
+// endbower
+
+.browserupgrade {
+    margin:0.2em 0;
+    background:#ccc;
+    color:#000;
+    padding:0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+    padding-top:65px;
+    padding-bottom:20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-right:15px;
+    padding-left:15px;
+}
+
+/* Custom page header */
+.header {
+    padding-bottom:20px;
+    border-bottom:1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top:0;
+    margin-bottom:0;
+    line-height:40px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top:19px;
+    color:#777;
+    border-top:1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width:768px) {
+    .container {
+        max-width:730px;
+    }
+}
+.container-narrow > hr {
+    margin:30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align:center;
+    border-bottom:1px solid #e5e5e5;
+}
+.jumbotron .btn {
+    padding:14px 24px;
+    font-size:21px;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin:40px 0;
+}
+.marketing p + h4 {
+    margin-top:28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width:768px) {
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-right:0;
+        padding-left:0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom:30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom:0;
+    }
+}
+
+/*******************************************************************************
+*Mixins by msantana
+*******************************************************************************/
+//Adds an animated border with the provided colour in a very long transition to
+//make it smooth from a darker version of the original colour to a darker version
+//of the same colour
+@mixin animated-border($color-end) {
+    border:3px solid $color-end;
+    $lighter:lighten($color-end, 30% );
+    $darker:darken($color-end, 30% );
+    transition:all 0.3s ease-out; -webkit-animation:random 30s infinite;
+    animation:random 30s infinite;
+    @keyframes  random {
+        60%  {border-color:$darker; }
+        75%  {border-color:$lighter; }
+    }
+}
+//Squared corner Button
+@mixin btn-round-none() {
+    border-radius:0px; -webkit-border-radius:0px; -moz-border-radius:0px;
+}
+/*******************************************************************************
+* Custom styles by msantana
+###############################################################################*/
+/*******************************************************************************
+* Navbar adjustements
+*******************************************************************************/
+button.navbar-btn{
+      margin-top:25px;
+}
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}
+
+//Fixed main container for slot
+.container-fixed {
+    @extend .container-fluid;
+    // @include animated-border(#3cb878);
+    position:fixed;
+    padding:0;
+    bottom:0;
+    left:0;
+    right:0;
+    top:50px;
+    overflow:hidden;
+    width:100vw;
+    margin:0;
+    /********************
+    Font
+    ********************/
+    font-size:1.5rem;
+}
+//Right column (The questions area)
+.column-right {
+    padding:8px;
+    padding-top:0;
+    padding-right:30px;
+    margin-top:10px;
+    border:0px;
+    height:100%;
+    // font-size: 1em;
+    // background-color: #67a0ff;
+    .row {
+        height:100%;
+        overflow:scroll;
+        padding:8px;
+        margin-top:-4px;
+    }
+}
+//Images container
+.container-images {
+    // height: 50%;
+    width: 100%;
+    // overflow: scroll;
+    // padding-bottom: 65px;
+    // padding-bottom: 15vh;
+    // padding-right:0;
+    padding-left: 58px;
+    // padding-top: 8px;
+    // margin-right:0;
+    // margin-left:0;
+    // margin-right:-20px;
+    .thumbnail {
+        height: 50%;
+    }
+}
+.col-image {
+    @extend .col-xs-10;
+    @extend .col-xs-offset-1;
+}
+
+.thumbnail {
+    background-color: white;
+    height: 10%;
+}
+.container-images__miniatures {
+    padding-left: 16px;
+    background-color: $gray-light;
+    background-color: transparentize($gray-light, 0.4);
+}
+
+.container-vignette {
+    height:30%;
+    overflow:scroll;
+    padding:15px;
+    padding:30px;
+}
+
+//Alert like a toast
+.my-alert {
+    z-index:9999;
+    position:fixed;
+    width:60vw;
+    height:150px;
+    bottom:-5px;
+    right:20vw;
+    left:20vw;
+    align:center;
+    background-color:rgba($brand-danger, 0.9);
+    border:0;
+    color:white;
+    // margin-top: 80vw;
+}
+
+//Rounded button corner
+.btn {
+    @include btn-round-none();
+}
+
+.modal-dialog {
+    width:80%;
+    height:60%;
+    .modal-dialog img {
+        width:100%;
+    }
+}
+// .modal-body img {
+//     width:100%;
+// }
+
+//Gallery elements
+.thumbnail {
+    width: 100%;
+}
+
+// .fontSize {
+//   .small {
+//     font-size: 1.25rem;
+//   }
+//   .big {
+//     font-size: 2.5rem;
+//   }
+// }
+.portfolio_slider {
+  margin: 60px auto;
+  max-width: 1200px;
+  border: 5px solid black;
+  /*display: flex;*/
+/*   flex-flow: row wrap; */
+}
+.portfolio_slider {
+  flex: 1 1 0;
+  background-color: whitesmoke;
+}
+
+.inner {
+  padding: 6px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+img:hover {
+  // opacity: 0.9;
+}
