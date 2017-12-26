@@ -160,8 +160,6 @@ button.navbar-btn{
     margin-top:10px;
     border:0px;
     height:100%;
-    // font-size: 1em;
-    // background-color: #67a0ff;
     .row {
         height:100%;
         overflow:scroll;
@@ -169,7 +167,7 @@ button.navbar-btn{
         margin-top:-4px;
     }
 }
-//Images container
+//Images container contains the slider elements not directly the image
 .container-images-main {
     @extend .row;
     padding-left: 36px;
@@ -177,37 +175,29 @@ button.navbar-btn{
     height: 60vh;
 
 }
+//This contains the actual image
 .container-images {
     // height: 50%;
     padding-top: 0;
     margin-top: 0;
     color: #333;
-background: #419be0;
-    // overflow: scroll;
-    // padding-bottom: 65px;
-    // padding-bottom: 15vh;
-    // padding-right:0;
+    background: #419be0;
+    max-height: 100%;
     padding: 28px;
-    // padding-top: 8px;
-    // margin-right:0;
-    // margin-left:0;
-    // margin-right:-20px;
-    // margin: 50px;
+    padding-top: 8px;
     .thumbnail {
         height: 400px;
         max-height:100%;
     }
+    img {
+      @extend .img-thumbnail;
+      @extend .img-responsive;
+      height: 400px;
+      max-height:100%;
+    }
 
 }
-.col-image {
-    @extend .col-xs-10;
-    @extend .col-xs-offset-1;
-}
 
-.thumbnail {
-    background-color: white;
-    height: 10%;
-}
 .container-images__miniatures {
     padding-left: 16px;
     background-color: $gray-light;
@@ -249,21 +239,3 @@ background: #419be0;
         width:100%;
     }
 }
-// .modal-body img {
-//     width:100%;
-// }
-
-//Gallery elements
-// .thumbnail {
-//     width: 100%;
-//     height: 100%;
-// }
-
-// .fontSize {
-//   .small {
-//     font-size: 1.25rem;
-//   }
-//   .big {
-//     font-size: 2.5rem;
-//   }
-// }
