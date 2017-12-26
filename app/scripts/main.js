@@ -76,9 +76,8 @@ $(document).ready(function(){
 });
 
 
-//Take the parent href and use as its own
 
-
+/*
 $('a.gallery').colorbox({rel:'gallery', transition:"none", width:"95%", height:"75%"});
 $('a.gallery').zoom({
    callback: function(){
@@ -91,42 +90,8 @@ $('a.gallery').zoom({
 $('.gallery').each(function( index ) {
   index + ": " + $( this ).prepend(index+1 +" de " + $('.gallery').length);
 });
-
+*/
 //Slick test
-$('.gallery-responsive').slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
+$(".single-item").slick({
+	dots: true
 });
