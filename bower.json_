@@ -1,0 +1,29 @@
+{
+  "name": "frontend",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "modernizr": "~2.8.1",
+    "sass-font-awesome": "",
+    "js-cookie": ""
+
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+  },
+  "sass-font-awesome": {
+    "main": [
+      "font-awesome.scss",
+      "fonts/*"
+    ]
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}

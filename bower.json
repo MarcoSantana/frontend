@@ -1,0 +1,67 @@
+{
+  "name": "frontend",
+  "description": "",
+  "main": "",
+  "authors": [
+    "MarcoSantana <marco.santana@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/MarcoSantana/frontend",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "bootstrap-toggle": "^2.2.2",
+    "jquery-zoom": "^1.7.20",
+    "js-cookie": "^2.2.0",
+    "modernizr": "~2.8.1",
+    "sass-font-awesome": "^1.0.2",
+    "slick-carousel": "slick.js#^1.8.1"
+},
+"overrides": {
+  "bootstrap-sass": {
+    "main": [
+      "assets/stylesheets/_bootstrap.scss",
+      "assets/fonts/bootstrap/*",
+      "assets/javascripts/bootstrap.js"
+    ]
+  },
+  "sass-font-awesome": {
+    "main": [
+      "font-awesome.scss",
+      "fonts/*"
+    ]
+  },
+  "js-cookie": {
+      "main": [
+          "source/js.js.cookie.js"
+      ]
+  },
+  "bootstrap-toggle": {
+      "main": [
+          "css/bootstrap-toggle.css",
+          "js/bootstrap-toggle.js"
+      ]
+  },
+  "slick-carousel": {
+    "main": [
+      "slick/slick.scss",
+      "slick/slick.css",
+      "slick/slick-theme.scss",
+      "slick/slick-theme.css",
+      "slick/slick.js",
+      "slick/fonts/*"
+    ]
+  }
+},
+"devDependencies": {
+  "chai": "^4.1.2",
+  "mocha": "^4.0.1"
+}
+
+}
