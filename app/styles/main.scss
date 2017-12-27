@@ -171,8 +171,11 @@ button.navbar-btn{
 .container-images-main {
     @extend .row;
     padding-left: 36px;
-    padding-right: 36px;
-    height: 60vh;
+    padding-top: 0;
+    // padding-right: 18px;
+    // height: 65vh;
+    height: 100%;
+    width: 100%;
 
 }
 //This contains the actual image
@@ -181,8 +184,11 @@ button.navbar-btn{
     padding-top: 0;
     margin-top: 0;
     color: #333;
-    background: #419be0;
+    // background: #419be0;
+    background: $brand-primary;
+    width: 100%;
     max-height: 100%;
+    text-align: center;
     padding: 28px;
     padding-top: 8px;
     .thumbnail {
@@ -192,18 +198,15 @@ button.navbar-btn{
     img {
       @extend .img-thumbnail;
       @extend .img-responsive;
-      height: 400px;
+      // height: 400px;
+      height: 55vh;
       max-height:100%;
     }
 
 }
-
-.container-images__miniatures {
-    padding-left: 16px;
-    background-color: $gray-light;
-    background-color: transparentize($gray-light, 0.4);
-}
-
+/******************************************************************************
+Styles for slick slider
+******************************************************************************/
 .container-vignette {
     height:30%;
     overflow:scroll;

@@ -17,7 +17,6 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "bootstrap-toggle": "^2.2.2",
-    "jquery-colorbox": "^1.6.4",
     "jquery-zoom": "^1.7.20",
     "js-cookie": "^2.2.0",
     "modernizr": "~2.8.1",
@@ -52,7 +51,9 @@
   "slick-carousel": {
     "main": [
       "slick/slick.scss",
+      "slick/slick.css",
       "slick/slick-theme.scss",
+      "slick/slick-theme.css",
       "slick/slick.js",
       "slick/fonts/*"
     ]
